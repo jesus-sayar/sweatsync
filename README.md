@@ -8,6 +8,15 @@ Many gym machines only talk to their own app. SweatSync connects directly to any
   <img src="docs/workout.png" alt="Workout screen recording a bike session: time, speed, distance, cadence, power and heart rate" width="300">
 </p>
 
+## Install
+
+1. On your Android phone (Android 10 or newer), download **[SweatSync.apk](https://github.com/jesus-sayar/sweatsync/releases/latest/download/SweatSync.apk)**.
+2. Open the downloaded file. If Android asks, allow your browser or Files app to **install unknown apps**.
+3. Tap **Install**. If Play Protect warns that the developer is unknown, tap **More details → Install anyway**.
+4. Open SweatSync, enter your weight and date of birth, and allow **Nearby devices** (Bluetooth) and notifications.
+
+To update, install the new APK over the old one: your history and connections are kept.
+
 ## Features
 
 - Lists nearby machines and pairs with the one you pick.

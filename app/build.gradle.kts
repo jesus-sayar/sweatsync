@@ -15,8 +15,23 @@ android {
         versionName = "1.0"
     }
 
+    // Release signing comes from Gradle properties kept outside the repo (~/.gradle/gradle.properties);
+    // without them the release APK is built unsigned.
+    val keystore = providers.gradleProperty("sweatsync.keystore").orNull
+    signingConfigs {
+        if (keystore != null) {
+            create("release") {
+                storeFile = file(keystore)
+                storePassword = providers.gradleProperty("sweatsync.keystore.password").get()
+                keyAlias = providers.gradleProperty("sweatsync.key.alias").get()
+                keyPassword = providers.gradleProperty("sweatsync.key.password").get()
+            }
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.findByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))

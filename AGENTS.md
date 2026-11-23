@@ -32,6 +32,8 @@ UI checks with `adb shell uiautomator dump` fail on the Workout screen (it never
 
 `.gitignore` keeps out build output, `local.properties`, signing keys (`*.jks`, `*.keystore`), `.env` files, APKs and `.fit` files. Before committing, check that no token, cookie, password, e-mail or personal path has entered the sources or docs.
 
+Releases: the README's install link points at `releases/latest/download/SweatSync.apk`, so every GitHub release must attach the APK under exactly that name. Publish a **release** build (`./gradlew assembleRelease`, minified with R8), never the debug APK: a debuggable app lets anyone with adb read its private data (tokens, cookies). It is signed with the owner's key, configured through `sweatsync.keystore`, `sweatsync.keystore.password`, `sweatsync.key.alias` and `sweatsync.key.password` in `~/.gradle/gradle.properties`, outside the repo; without them the APK comes out unsigned. Always sign with the same key, or users cannot update over the old version. Bump `versionCode` and `versionName` in `app/build.gradle.kts` before each new release.
+
 ## Architecture
 
 Packages under `app/src/main/java/com/sweatsync/`, each with one job:
