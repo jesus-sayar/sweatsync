@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SweatSync" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/accent_soft</item>
+        <item name="colorOnPrimaryContainer">@color/ink</item>
+        <item name="colorSecondary">@color/ink</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/accent_soft</item>
+        <item name="colorOnSecondaryContainer">@color/ink</item>
+        <item name="colorTertiary">@color/ok</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorOnSurfaceVariant">@color/ink_variant</item>
+        <item name="colorSurfaceContainer">@color/surface</item>
+        <item name="colorSurfaceContainerHigh">@color/tonal</item>
+        <item name="colorOutline">@color/ink_variant</item>
+        <item name="colorOutlineVariant">@color/outline</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="fontFamily">@font/barlow</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="colorControlNormal">@color/ink</item>
+        <item name="shapeAppearanceMediumComponent">@style/Shape.Card</item>
+        <item name="shapeAppearanceLargeComponent">@style/Shape.Card</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.SweatSync.Dialog</item>
+        <item name="toolbarStyle">@style/Widget.SweatSync.Toolbar</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.SweatSync.BottomSheet</item>
+        <item name="colorSurfaceContainerLow">@color/surface</item>
+    </style>
+
+    <style name="ThemeOverlay.SweatSync.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.SweatSync.BottomSheet</item>
+    </style>
+
+    <style name="Widget.SweatSync.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/surface</item>
+    </style>
+
+    <style name="ThemeOverlay.SweatSync.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurfaceContainerHigh">@color/surface</item>
+        <item name="colorPrimary">@color/accent_strong</item>
+    </style>
+
+    <style name="Shape.Card" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="Shape.Pill" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Top bar: centred bold title, salmon navigation and action icons, as in Strava -->
+    <style name="Widget.SweatSync.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/surface</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="titleCentered">true</item>
+        <item name="titleTextAppearance">@style/TextAppearance.SweatSync.ToolbarTitle</item>
+        <item name="titleTextColor">@color/ink</item>
+        <item name="navigationIconTint">@color/accent_strong</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.SweatSync.Toolbar</item>
+    </style>
+
+    <!-- Home top bar: the app name as a wordmark on the left, as Strava does on its home -->
+    <style name="Widget.SweatSync.Toolbar.Brand">
+        <item name="titleCentered">false</item>
+        <item name="contentInsetStart">20dp</item>
+        <item name="titleTextAppearance">@style/TextAppearance.SweatSync.Brand</item>
+    </style>
+
+    <!-- Heavy and compact, like Strava's wordmark on its home screen -->
+    <style name="TextAppearance.SweatSync.Brand" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/barlow_black</item>
+        <item name="fontFamily">@font/barlow_black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="ThemeOverlay.SweatSync.Toolbar" parent="">
+        <item name="colorControlNormal">@color/accent_strong</item>
+    </style>
+
+    <style name="TextAppearance.SweatSync.ToolbarTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Type roles -->
+    <style name="Text.Title" parent="">
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="Text.Headline" parent="">
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="Text.Body" parent="">
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/ink_variant</item>
+    </style>
+
+    <!-- Secondary line of a row, and the small grey label above a value ("Distance") -->
+    <style name="Text.Meta" parent="Text.Body">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- Uppercase caption of the live metrics ("TIME") -->
+    <style name="Text.Caption" parent="">
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textColor">@color/ink_variant</item>
+    </style>
+
+    <!-- Grey band that heads a group of rows ("PERSONAL DATA") -->
+    <style name="Text.Section" parent="Text.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@color/band</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <!-- Unit under a live number ("KM/H") -->
+    <style name="Text.Unit" parent="Text.Caption">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/muted</item>
+    </style>
+
+    <!-- Live numbers: condensed and tabular so digits do not jump while they change -->
+    <style name="Text.Hero" parent="">
+        <item name="android:fontFamily">@font/barlow_condensed</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">112sp</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Metric" parent="Text.Hero">
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <!-- Values of a finished activity: regular figures, like Strava's summaries -->
+    <style name="Text.Value" parent="">
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+    </style>
+
+    <style name="Text.Tag" parent="">
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/accent_strong</item>
+    </style>
+
+    <!-- Buttons are pills: filled salmon for the main action, outlined salmon for secondary ones -->
+    <style name="Button.Action" parent="Widget.Material3.Button">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="shapeAppearance">@style/Shape.Pill</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">20dp</item>
+    </style>
+
+    <style name="Button.Dark" parent="Button.Action">
+        <item name="backgroundTint">@color/ink</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="Button.Outline" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textColor">@color/accent_strong</item>
+        <item name="strokeColor">@color/accent_strong</item>
+        <item name="iconTint">@color/accent_strong</item>
+        <item name="shapeAppearance">@style/Shape.Pill</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="Button.Outline.Small" parent="Button.Outline">
+        <item name="android:minHeight">36dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Button.Outline.Danger" parent="Button.Outline">
+        <item name="android:textColor">@color/error</item>
+        <item name="strokeColor">@color/error</item>
+    </style>
+
+    <style name="Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <!-- Bottom navigation: grey outlined icons, a salmon filled icon and label for the current tab -->
+    <style name="Nav.Bar" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/surface</item>
+        <item name="itemTextAppearanceActive">@style/Nav.Label</item>
+        <item name="itemTextAppearanceInactive">@style/Nav.Label</item>
+        <item name="itemIconTint">@color/nav_item</item>
+        <item name="itemTextColor">@color/nav_item</item>
+        <item name="itemActiveIndicatorStyle">@style/Nav.NoIndicator</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Nav.NoIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <style name="Nav.Label" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">@font/barlow</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SweatSync</string>
+
+    <!-- Devices -->
+    <string name="devices_title">Elige tu máquina</string>
+    <string name="devices_hint">Enciende tu cinta o bici y aparecerá aquí.</string>
+    <string name="scanning">Buscando máquinas…</string>
+    <string name="last_used">Último uso</string>
+    <string name="unknown_machine">Máquina fitness</string>
+
+    <!-- Status -->
+    <string name="status_disconnected">Máquina desconectada</string>
+    <string name="status_connect_failed">No se pudo conectar. Comprueba que la máquina está encendida y que ninguna otra app está conectada a ella.</string>
+    <string name="status_bt_off">Activa el Bluetooth</string>
+    <string name="status_scan_failed">No se pudo buscar. Reintentando…</string>
+    <string name="status_no_ftms">Esta máquina no ofrece FTMS, el protocolo estándar de fitness.</string>
+    <string name="status_permission">Se necesitan permisos de Bluetooth</string>
+
+    <!-- Workout -->
+    <string name="time">Tiempo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="finish">Finalizar</string>
+    <string name="machine_treadmill">Cinta</string>
+    <string name="machine_bike">Bici</string>
+    <string name="leave_title">¿Terminar la actividad?</string>
+    <string name="leave_finish">Guardar</string>
+    <string name="leave_discard">Descartar</string>
+    <string name="leave_keep">Cancelar</string>
+    <string name="too_short">Actividad demasiado corta, descartada</string>
+    <string name="save_failed">No se pudo guardar el archivo</string>
+
+    <!-- Uploads -->
+    <string name="uploading">Subiendo…</string>
+    <string name="upload_ok">Subida a %1$s ✓</string>
+    <string name="upload_duplicate">%1$s ya tenía esta actividad</string>
+    <string name="upload_login">%1$s: vuelve a iniciar sesión en Configuración</string>
+    <string name="upload_error">%1$s: %2$s</string>
+    <string name="retry">Reintentar</string>
+    <string name="close">Cerrar</string>
+
+    <!-- Accounts -->
+    <string name="garmin_name">Garmin Connect</string>
+    <string name="strava_name">Strava</string>
+    <string name="connect">Conectar</string>
+    <string name="disconnect">Desconectar</string>
+    <string name="garmin_login_title">Iniciar sesión en Garmin</string>
+    <string name="garmin_login_note">Solo se guarda un token, no tu contraseña.</string>
+    <string name="email_hint">Email de Garmin</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="sign_in">Entrar</string>
+    <string name="mfa_title">Verificación en dos pasos</string>
+    <string name="mfa_note">Garmin te ha enviado un código.</string>
+    <string name="mfa_hint">Código de verificación</string>
+    <string name="send">Enviar</string>
+    <string name="signing_in">Iniciando sesión…</string>
+    <string name="sign_in_failed">No se pudo iniciar sesión</string>
+
+    <!-- Notification -->
+    <string name="channel_name">Sesión de la máquina</string>
+    <string name="notif_title_running">Actividad en curso</string>
+    <string name="notif_connecting">Conectando con la máquina…</string>
+    <string name="notif_connected">Máquina conectada</string>
+    <string name="notif_disconnected">Máquina desconectada</string>
+    <string name="onboarding_title">Bienvenido a SweatSync</string>
+    <string name="onboarding_text">Para poder mostrar el gasto energético de tus actividades necesitamos que rellenes los siguientes datos.</string>
+    <string name="weight">Peso</string>
+    <string name="kg">Kg</string>
+    <string name="birth_date">Fecha de nacimiento</string>
+    <string name="continue_label">Continuar</string>
+    <string name="tab_home">Inicio</string>
+    <string name="tab_history">Actividades</string>
+    <string name="tab_settings">Configuración</string>
+    <string name="history_title">Actividades</string>
+    <string name="history_empty">Aún no hay actividades. Finaliza una y aparecerá aquí.</string>
+    <string name="detail_distance">Distancia</string>
+    <string name="detail_duration">Duración</string>
+    <string name="detail_kcal">Calorías</string>
+    <string name="detail_pace">Ritmo medio</string>
+    <string name="detail_speed">Velocidad media</string>
+    <string name="start">Iniciar</string>
+    <string name="pause">Pausar</string>
+    <string name="resume">Reanudar</string>
+    <string name="settings_title">Configuración</string>
+    <string name="personal_data">Datos personales</string>
+    <string name="platforms">Conexión con plataformas</string>
+    <string name="connected">Conectado</string>
+    <string name="sync_active">Sincronización activa</string>
+    <string name="weight_title">Peso (kg)</string>
+    <string name="invalid_weight">Introduce un peso entre 20 y 300 kg</string>
+    <string name="notif_paused">En pausa</string>
+    <string name="unit_km">km</string>
+    <string name="state_ready">Listo</string>
+    <string name="state_recording">Grabando</string>
+    <string name="state_paused">En pausa</string>
+    <string name="state_connecting">Conectando</string>
+    <string name="label_distance">Distancia</string>
+    <string name="label_pace">Ritmo</string>
+    <string name="label_speed">Velocidad</string>
+    <string name="label_cadence">Cadencia</string>
+    <string name="label_power">Potencia</string>
+    <string name="label_hr">Pulso</string>
+    <string name="label_activity">Actividad</string>
+    <string name="label_state">Estado</string>
+    <string name="unit_pace">min/km</string>
+    <string name="unit_rpm">rpm</string>
+    <string name="unit_w">W</string>
+    <string name="unit_bpm">ppm</string>
+    <string name="unit_kmh">km/h</string>
+    <string name="unit_kcal">kcal</string>
+    <string name="delete">Eliminar</string>
+    <string name="delete_title">¿Eliminar esta actividad?</string>
+    <string name="delete_message">Se quitará de tu histórico. No se borra de Garmin ni de Strava.</string>
+    <string name="activity_title">Actividad</string>
+    <string name="sync_title">Sincronización</string>
+    <string name="search_paused">Búsqueda en pausa</string>
+    <string name="search_again">Buscar de nuevo</string>
+    <string name="fmt_date_time">%1$s a las %2$s</string>
+    <string name="fmt_weight">%1$s kg</string>
+
+    <!-- Búsqueda de máquinas -->
+    <string name="search_paused_hint">Desliza hacia abajo para buscar de nuevo.</string>
+    <string name="status_location_off">Activa la ubicación</string>
+    <string name="status_location_hint">Android la necesita para buscar dispositivos Bluetooth.</string>
+    <string name="status_bt_hint">SweatSync lo usa para encontrar tu máquina.</string>
+    <string name="status_permission_hint">Sin él no se puede encontrar ninguna máquina.</string>
+    <string name="action_enable_bt">Activar Bluetooth</string>
+    <string name="action_enable_location">Activar ubicación</string>
+    <string name="action_grant">Dar permiso</string>
+    <string name="signal_strong">Señal fuerte</string>
+    <string name="signal_medium">Señal media</string>
+    <string name="signal_weak">Señal débil</string>
+
+    <!-- Nombres de actividad, al estilo Strava -->
+    <string name="title_treadmill_morning">Cinta por la mañana</string>
+    <string name="title_treadmill_afternoon">Cinta por la tarde</string>
+    <string name="title_treadmill_night">Cinta por la noche</string>
+    <string name="title_bike_morning">Bici por la mañana</string>
+    <string name="title_bike_afternoon">Bici por la tarde</string>
+    <string name="title_bike_night">Bici por la noche</string>
+    <string name="sync_active_hint">Sube cada actividad al terminarla.</string>
+    <string name="section_account">Cuenta</string>
+</resources>

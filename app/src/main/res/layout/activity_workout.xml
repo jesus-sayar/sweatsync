@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Back: leaves directly before Start; once an activity is under way it opens the same sheet as Finish -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_back" />
+
+    <!-- The big numbers shrink to fit (WorkoutActivity.fitToScreen); scrolling is only a fallback for tiny screens -->
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <!-- Activity and state as two captioned cells, like the metrics below -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hairline"
+                android:background="@color/outline" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_activity" />
+
+                    <!-- The machine icon is set at runtime as the start drawable -->
+                    <TextView
+                        android:id="@+id/tvType"
+                        style="@style/Text.Headline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="4dp"
+                        android:drawablePadding="8dp"
+                        app:drawableTint="@color/ink"
+                        android:gravity="center_vertical"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_state" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/viewRec"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/dot" />
+
+                        <TextView
+                            android:id="@+id/tvState"
+                            style="@style/Text.Headline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hairline"
+                android:background="@color/outline" />
+
+            <TextView
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/time" />
+
+            <!-- Fixed height: auto-sized text with a wrapped height re-measures differently on relayout -->
+            <TextView
+                android:id="@+id/tvTime"
+                style="@style/Text.Hero"
+                android:layout_width="match_parent"
+                android:layout_height="116dp"
+                android:layout_marginTop="4dp"
+                android:autoSizeMaxTextSize="112sp"
+                android:autoSizeMinTextSize="56sp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/time_zero" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/outline" />
+
+            <!-- The main live metric: pace on the treadmill, speed on the bike -->
+            <TextView
+                android:id="@+id/tvPrimaryLabel"
+                style="@style/Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvPrimary"
+                style="@style/Text.Hero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="96sp" />
+
+            <TextView
+                android:id="@+id/tvPrimaryUnit"
+                style="@style/Text.Unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/outline" />
+
+            <LinearLayout
+                android:id="@+id/metrics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMain"
+            style="@style/Button.Action"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="@string/start"
+            app:icon="@drawable/ic_play" />
+
+        <LinearLayout
+            android:id="@+id/rowPaused"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResume"
+                style="@style/Button.Dark"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:text="@string/resume"
+                app:icon="@drawable/ic_play" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFinish"
+                style="@style/Button.Action"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:text="@string/finish"
+                app:icon="@drawable/ic_stop" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

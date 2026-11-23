@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Strava-like neutrals: white surfaces, soft near-black text, grey bands between sections -->
+    <color name="bg">#FFFFFF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="band">#F4F4F6</color>
+    <color name="ink">#242428</color>
+    <color name="ink_variant">#6D6D78</color>
+    <color name="muted">#9A9AA5</color>
+    <color name="outline">#E4E4EA</color>
+    <color name="tonal">#F2F2F5</color>
+
+    <!-- Salmon accent: fills use accent; text and icons on white use accent_strong, which keeps enough contrast -->
+    <color name="accent">#FF806B</color>
+    <color name="accent_strong">#F0624A</color>
+    <color name="accent_soft">#FFE8E3</color>
+
+    <color name="error">#E5484D</color>
+    <color name="ok">#1E9E5A</color>
+    <color name="white">#FFFFFF</color>
+</resources>
